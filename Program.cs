@@ -43,8 +43,7 @@ namespace Facebook_Integration
            
             Program.SaveFile();
           
-            //string accessTokenwithValidity=EAAU89d7UC9UBAJwd6OKftAsG05HeX6vJJIlkK2g2xKUNclbJprzf7PxzLWRnH1NO4n7moFWk1AGWvjgkAoXUHpnclct0mnAm2ia7oAIEV3ra50QMzyZA7ErAsstwvZBYWMt8bDFYo2VR01VVVcImI9kdYRAjZA7jjG1YvjzAkWDRtjuDIfy
-            string accessToken = "EAAU89d7UC9UBAJwd6OKftAsG05HeX6vJJIlkK2g2xKUNclbJprzf7PxzLWRnH1NO4n7moFWk1AGWvjgkAoXUHpnclct0mnAm2ia7oAIEV3ra50QMzyZA7ErAsstwvZBYWMt8bDFYo2VR01VVVcImI9kdYRAjZA7jjG1YvjzAkWDRtjuDIfy";
+            string accessToken = "";  //your access token
             //GetFbCommentList();
             //CommentOnPost();
             //CountFbFollowers();
@@ -71,7 +70,7 @@ namespace Facebook_Integration
                 //Console.WriteLine("Post shared successfully. Post ID: " + postId);
                 //Console.ReadLine();
 
-                var client = new FacebookClient("EAAU89d7UC9UBALEbEUQMFd4IKfNMwZBvkZBsL6LvS5H66AhSXHzPAs9oj3qOu0RHpL4yMFBL0eZCeHZArWp8x7kaccOSDlLR4rHBQSCjSAtO9KPJGSmyd6LZABa03c7IcU3In7u3J292O2SvQaYSfHRNu6XbHpA3GZCMRbA3iKGRq19Blqk2s0NGizkabVZCBYsIVSFnn02XwBHZBmLFtPr2FWMbxYK9qZCQVVVHSmgshazlQBVbt2KKr");
+                var client = new FacebookClient(""); //your access token
                 var parameters = new Dictionary<string, object>
                 {
                    { "message", "Hallo I am Sitesh" },
@@ -98,7 +97,7 @@ namespace Facebook_Integration
                 Directory.CreateDirectory(folderPath);
                 string commentMessage = "";
                 //Access Token canbe expired so please enter valid token after regenerate.
-                var client = new FacebookClient("EAAU89d7UC9UBAHjOuoBnvPPMTOKK76q1bhUnHu73zsbnH86uPk8BHxzPgN5nYqgp2TPwhFjP6BXSIVbUlJrQWTVFustyxrhQ814bOyZAV8VLAf3T4ZB8TEvEYyFcg9NtU5Amtpejia8J6SSZC9FMQZClZAZBU0GWbj679DOLkO9JyWY8jDZBuvLaEMeo3M8FdPMIWrSQSxlh6gx8Wo0krMs");
+                var client = new FacebookClient("");  //your access token
                 string pageId = "102847089502067"; //3536027056616903 ,//102847089502067
                 dynamic posts = client.Get($"{pageId}/posts");
 
@@ -141,7 +140,7 @@ namespace Facebook_Integration
         {
             string postId= "118313477940943";
             string pageId = "102847089502067";
-            string accessToken= "EAAU89d7UC9UBAOh2jsWo17r8SZAP2DXpvpgDxS366caVTDNFWll4GZA65oEmn2Gq08xXKz7yGMZAkKOaCthuNf1seESAWMwEfZBpVxuPdPZAA2Ms2yroYOVdq1EZBIftLtZBapfz87YglL96KRBD3VSsH9rlwVCSZApJSYJOPqwJGmwQwlOCWme3";
+            string accessToken= "";  //your access token
             string message = "Thank You So Much";
 
             try
@@ -175,7 +174,7 @@ namespace Facebook_Integration
         {
             try
             {
-                var client = new FacebookClient("EAAKfKwx3rmwBACYs4zRi4a0yiMSntZBIb2yraCEsxrjdHvp0bnENZBZCxhokD0ZCFYqwWvnHhPzhQIYd0swZB0pp2WFrqOZAnUE5E3L4ido8Kn8WuGeYlYQZChuYa1HbvmbX49AZAFFBIe3CN4Kb2SGMG8Xb2cx0yfAn9BCoan5f8QBrrPAW3npkRDDwRys6WS51tWCGVeILxwZDZD");
+                var client = new FacebookClient("");  //your access token
                 var parameters = new Dictionary<string, object>
             {
                { "fields", "fan_count" } // Retrieve only the fan_count field (follower count)
@@ -197,7 +196,7 @@ namespace Facebook_Integration
         {
             try
             {
-                var client = new FacebookClient("EAAKfKwx3rmwBACYs4zRi4a0yiMSntZBIb2yraCEsxrjdHvp0bnENZBZCxhokD0ZCFYqwWvnHhPzhQIYd0swZB0pp2WFrqOZAnUE5E3L4ido8Kn8WuGeYlYQZChuYa1HbvmbX49AZAFFBIe3CN4Kb2SGMG8Xb2cx0yfAn9BCoan5f8QBrrPAW3npkRDDwRys6WS51tWCGVeILxwZDZD");
+                var client = new FacebookClient("");  //your access token
                 var parameters = new Dictionary<string, object>
             {
                { "fields", "followers_count" } // Retrieve only the fan_count field (follower count) use (follow_count) for follow by you count get.
@@ -219,7 +218,7 @@ namespace Facebook_Integration
         {
             try
             {
-                var accessToken = "EAAKfKwx3rmwBACYs4zRi4a0yiMSntZBIb2yraCEsxrjdHvp0bnENZBZCxhokD0ZCFYqwWvnHhPzhQIYd0swZB0pp2WFrqOZAnUE5E3L4ido8Kn8WuGeYlYQZChuYa1HbvmbX49AZAFFBIe3CN4Kb2SGMG8Xb2cx0yfAn9BCoan5f8QBrrPAW3npkRDDwRys6WS51tWCGVeILxwZDZD";
+                var accessToken = "";  //your access token
                 var postId = "384262082655927";
 
                 var fb = new FacebookClient(accessToken);
@@ -249,7 +248,7 @@ namespace Facebook_Integration
         {
             try
             {
-                //var accessToken = "EAAKfKwx3rmwBACYs4zRi4a0yiMSntZBIb2yraCEsxrjdHvp0bnENZBZCxhokD0ZCFYqwWvnHhPzhQIYd0swZB0pp2WFrqOZAnUE5E3L4ido8Kn8WuGeYlYQZChuYa1HbvmbX49AZAFFBIe3CN4Kb2SGMG8Xb2cx0yfAn9BCoan5f8QBrrPAW3npkRDDwRys6WS51tWCGVeILxwZDZD";
+                //var accessToken = ""; //your access token
                
                 // Replace with the post ID of the Facebook page post
                 string postId = "102847089502067_118289507943340";
@@ -285,7 +284,7 @@ namespace Facebook_Integration
         {
             try
             {
-                var client = new FacebookClient("EAAU89d7UC9UBADv2RpMAj73SA9F4tD9mAsPegmHhxRSlO00vJ3elgRo2Q7ylVU1namdjroBmBryjHNNyTNcJB6DMZAXsbJhxEZAsEd5L2z9DsbO1ZCFFuLHZAu3yuFzlHUbFZAHcEuqKmOaeXObxzFzMj25ZBV5F7z4ZBZBLsvM1oqXJrZC2Kadzs8AEBaA3hRm7aYOpZApdsldq8DcYKoNqV1");
+                var client = new FacebookClient(""); //your access token
                 var postId = "118289507943340"; // Replace with the actual post ID
                 dynamic result = client.Get($"{postId}/comments");
                 dynamic comments = result.data;
@@ -373,7 +372,7 @@ namespace Facebook_Integration
                 string folderPath = @"D:\FacebookIntegration\";
                 Directory.CreateDirectory(folderPath);
                 string pageId = "102847089502067";
-               // string accessToken = "EAAU89d7UC9UBANnHHjoK5aVnz9lvbAxLOORNdi5I99Sbm0KRSwZAz2eyvyeoQlJQNV4lYyNCXtalmi0ZBP415SA2VZBbHWjLx9PkxHSghpJj5n1rZA5KPsRi2bh9SeN3WESkn4LgC3bKHTT6kVLOZCZCMar6CZCFUW1ZClJ7G3qfcUr114K1TmxQA860Xd9zBaOZCEVZCHZCOeny4icN5oB4UHW";
+               // string accessToken = "";  //your access token
 
                 var fb = new FacebookClient(accessToken);
 
@@ -466,7 +465,7 @@ namespace Facebook_Integration
                 Directory.CreateDirectory(folderPath);
                 string commentname = "";
                 string commentMessage = "";
-                var client = new FacebookClient("EAAU89d7UC9UBAMyZBEmhdqDDnZB4jHGmXrzeXlCgfmzzskhOTALogTNYidHLs8iqWJv8cWGfFCVs2LRTfalVJbD4GcqAvqZAZAvftQqGoOZCmMkgsxkjuTVKcM5PGD7tAq4ZAOGFylfVqgD3IIldsXes1zZAkGvnqrHqDFviZCZBcpIBLFowi5sJe");
+                var client = new FacebookClient("");  //your access token
                 string pageId = "102847089502067";
                 string PostId = "";  //102847089502067_123996710705953
                 dynamic posts = client.Get($"{pageId}/posts");
@@ -735,7 +734,7 @@ namespace Facebook_Integration
                 string folderPath = @"D:\Divya\demo\Demo\InstagramIntegrated\";
                 Directory.CreateDirectory(folderPath);
                 string commentMessage = "";
-                var accessToken = "EAAU89d7UC9UBAHjOuoBnvPPMTOKK76q1bhUnHu73zsbnH86uPk8BHxzPgN5nYqgp2TPwhFjP6BXSIVbUlJrQWTVFustyxrhQ814bOyZAV8VLAf3T4ZB8TEvEYyFcg9NtU5Amtpejia8J6SSZC9FMQZClZAZBU0GWbj679DOLkO9JyWY8jDZBuvLaEMeo3M8FdPMIWrSQSxlh6gx8Wo0krMs";
+                var accessToken = "";  //your access token
                 var postId = "17968289699274524";
 
                 var fb = new FacebookClient(accessToken);
